@@ -33,4 +33,16 @@ class CiTest3Test {
         //then
         Assertions.assertEquals("hibernate", result);
     }
+
+    @Test
+    void spring_boot_test() throws Exception {
+        //given
+        CiTest3 ciTest = new CiTest3();
+
+        //when
+        String result = ciTest.test("spring");
+
+        //then
+        Assertions.assertEquals("boot", result);
+    }
 }
