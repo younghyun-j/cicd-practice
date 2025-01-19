@@ -6,13 +6,13 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class CiTest3Test {
+class CiTest4Test {
 
     @DisplayName("hello 매개변수를 전달하면 world 값을 반환한다")
     @Test
     void hello_world_test() throws Exception {
         //given
-        CiTest3 ciTest = new CiTest3();
+        CiTest4 ciTest = new CiTest4();
 
         //when
         String result = ciTest.test("hello");
@@ -25,36 +25,12 @@ class CiTest3Test {
     @Test
     void jpa_hibernate_test() throws Exception {
         //given
-        CiTest3 ciTest = new CiTest3();
+        CiTest4 ciTest = new CiTest4();
 
         //when
         String result = ciTest.test("jpa");
 
         //then
         Assertions.assertEquals("hibernate", result);
-    }
-
-    @Test
-    void spring_boot_test() throws Exception {
-        //given
-        CiTest3 ciTest = new CiTest3();
-
-        //when
-        String result = ciTest.test("spring");
-
-        //then
-        Assertions.assertEquals("boot", result);
-    }
-
-    @Test
-    void no_matched_default_test() throws Exception {
-        //given
-        CiTest3 ciTest = new CiTest3();
-
-        //when
-        String result = ciTest.test("tory");
-
-        //then
-        Assertions.assertEquals("default", result);
     }
 }

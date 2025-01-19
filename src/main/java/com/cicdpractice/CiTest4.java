@@ -1,12 +1,11 @@
 package com.cicdpractice;
 
-public class CiTest3 {
+public class CiTest4 {
     public String test(String input) {
         return switch (input) {
             case "hello" -> "world";
             case "jpa" -> "hibernate";
             case "spring" -> "boot";
-            case "cat" -> "tory";
             default -> "default";
         };
     }
