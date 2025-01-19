@@ -44,6 +44,17 @@ jacocoTestReport {
         html.required.set(true)
     }
     finalizedBy 'jacocoTestCoverageVerification'
+    afterEvaluate {
+        classDirectories.setFrom(
+                files(classDirectories.files.collect {
+                    fileTree(dir: it, excludes: [
+                            '**/*Application*',
+                            '**/*Exception*',
+                            '**/dto/**',
+                    ])
+                })
+        )
+    }
 }
 
 jacocoTestCoverageVerification {
