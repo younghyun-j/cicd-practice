@@ -1,6 +1,6 @@
 package com.cicdpractice;
 
-public class Test {
+public class CiTest {
     public String test(String input) {
         return switch (input) {
             case "hello" -> "world";
