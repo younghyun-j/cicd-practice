@@ -10,7 +10,7 @@ class CiTest2Test {
     @Test
     void hello_world_test() throws Exception {
         //given
-        CiTest ciTest = new CiTest();
+        CiTest2 ciTest = new CiTest2();
 
         //when
         String result = ciTest.test("hello");
@@ -23,7 +23,7 @@ class CiTest2Test {
     @Test
     void jpa_hibernate_test() throws Exception {
         //given
-        CiTest ciTest = new CiTest();
+        CiTest2 ciTest = new CiTest2();
 
         //when
         String result = ciTest.test("jpa");
@@ -35,7 +35,7 @@ class CiTest2Test {
     @Test
     void spring_boot_test() throws Exception {
         //given
-        CiTest ciTest = new CiTest();
+        CiTest2 ciTest = new CiTest2();
 
         //when
         String result = ciTest.test("spring");
