@@ -36,7 +36,7 @@ tasks.named('test') {
     useJUnitPlatform()
     finalizedBy 'jacocoTestReport'
     jacoco {
-        excludes += ['com/cicdpractice/CicdPracticeApplication.class'
+        excludes += ['**/XXXApplication.class'
                      // "com/cicdpractice/exceptionHandler/**",
                      // "com/cicdpractice/repository/**",
                      // "com/cicdpractice/service/KakaoUserService.class"
@@ -55,7 +55,7 @@ jacocoTestReport {
         classDirectories.setFrom(
                 files(classDirectories.files.collect {
                     fileTree(dir: it, excludes: [
-                            'com/cicdpractice/CicdPracticeApplication.class',
+                            '**/XXXApplication.class',
                     ])
                 })
         )
