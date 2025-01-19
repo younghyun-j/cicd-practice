@@ -30,17 +30,17 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Publish unit test results
-        uses: EnricoMi/publish-unit-test-result-action@v2
-        if: always()
-        with:
-          files: ${{ github.workspace }}/build/test-results/test/TEST-*.xml
-
       - name: Run clean tests and generate coverage report
         env:
           JAVA_HOME: ${{ steps.setup-java.outputs.java-home }}
         run: ./gradlew clean test jacocoTestReport
         continue-on-error: true
+
+      - name: Publish unit test results
+        uses: EnricoMi/publish-unit-test-result-action@v2
+        if: always()
+        with:
+          files: ${{ github.workspace }}/build/test-results/test/TEST-*.xml
 
       - name: Verify test coverage
         env:
