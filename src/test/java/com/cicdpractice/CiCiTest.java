@@ -53,6 +53,6 @@ class CiCiTest {
         String result = ciTest.test("tory");
 
         //then
-        Assertions.assertEquals("디폴트", result);
+        Assertions.assertEquals("default", result);
     }
 }
