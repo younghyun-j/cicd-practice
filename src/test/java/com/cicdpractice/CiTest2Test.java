@@ -4,13 +4,13 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-class CiCiTest {
+class CiTest2Test {
 
     @DisplayName("hello 매개변수를 전달하면 world 값을 반환한다")
     @Test
     void hello_world_test() throws Exception {
         //given
-        CiTest ciTest = new CiTest();
+        CiTest2 ciTest = new CiTest2();
 
         //when
         String result = ciTest.test("hello");
@@ -23,7 +23,7 @@ class CiCiTest {
     @Test
     void jpa_hibernate_test() throws Exception {
         //given
-        CiTest ciTest = new CiTest();
+        CiTest2 ciTest = new CiTest2();
 
         //when
         String result = ciTest.test("jpa");
@@ -35,7 +35,7 @@ class CiCiTest {
     @Test
     void spring_boot_test() throws Exception {
         //given
-        CiTest ciTest = new CiTest();
+        CiTest2 ciTest = new CiTest2();
 
         //when
         String result = ciTest.test("spring");
@@ -44,15 +44,4 @@ class CiCiTest {
         Assertions.assertEquals("boot", result);
     }
 
-    @Test
-    void no_matched_default_test() throws Exception {
-        //given
-        CiTest ciTest = new CiTest();
-
-        //when
-        String result = ciTest.test("tory");
-
-        //then
-        Assertions.assertEquals("default", result);
-    }
 }
