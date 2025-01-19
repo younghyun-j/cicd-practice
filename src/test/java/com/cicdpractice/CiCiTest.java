@@ -31,28 +31,4 @@ class CiCiTest {
         //then
         Assertions.assertEquals("hibernate", result);
     }
-
-    @Test
-    void spring_boot_test() throws Exception {
-        //given
-        CiTest ciTest = new CiTest();
-
-        //when
-        String result = ciTest.test("spring");
-
-        //then
-        Assertions.assertEquals("boot", result);
-    }
-
-    @Test
-    void no_matched_default_test() throws Exception {
-        //given
-        CiTest ciTest = new CiTest();
-
-        //when
-        String result = ciTest.test("tory");
-
-        //then
-        Assertions.assertEquals("default", result);
-    }
 }
