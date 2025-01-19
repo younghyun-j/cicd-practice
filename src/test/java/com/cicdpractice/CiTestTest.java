@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-class CiCiTest {
+class CiTestTest {
 
     @DisplayName("hello 매개변수를 전달하면 world 값을 반환한다")
     @Test
