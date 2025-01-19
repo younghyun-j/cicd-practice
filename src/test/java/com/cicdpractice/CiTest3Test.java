@@ -45,4 +45,16 @@ class CiTest3Test {
         //then
         Assertions.assertEquals("boot", result);
     }
+
+    @Test
+    void no_matched_default_test() throws Exception {
+        //given
+        CiTest3 ciTest = new CiTest3();
+
+        //when
+        String result = ciTest.test("tory");
+
+        //then
+        Assertions.assertEquals("default", result);
+    }
 }
