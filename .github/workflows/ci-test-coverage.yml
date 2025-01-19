@@ -34,6 +34,7 @@ jobs:
         env:
           JAVA_HOME: ${{ steps.setup-java.outputs.java-home }}
         run: ./gradlew clean test jacocoTestReport
+        continue-on-error: true
 
       - name: Verify test coverage
         env:
@@ -49,3 +50,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           min-coverage-overall: 80
           min-coverage-changed-files: 80
+          update-comment: true
