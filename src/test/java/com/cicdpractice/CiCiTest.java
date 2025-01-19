@@ -3,7 +3,9 @@ package com.cicdpractice;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
+@SpringBootTest
 class CiCiTest {
 
     @DisplayName("hello 매개변수를 전달하면 world 값을 반환한다")
